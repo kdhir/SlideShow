@@ -52,6 +52,7 @@
             this.currentFileBox.ItemHeight = 16;
             this.currentFileBox.Location = new System.Drawing.Point(12, 45);
             this.currentFileBox.Name = "currentFileBox";
+            this.currentFileBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.currentFileBox.Size = new System.Drawing.Size(661, 84);
             this.currentFileBox.TabIndex = 0;
             // 
@@ -151,12 +152,17 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "pix";
+            // 
             // intervalBox
             // 
             this.intervalBox.Location = new System.Drawing.Point(507, 256);
             this.intervalBox.Name = "intervalBox";
             this.intervalBox.Size = new System.Drawing.Size(100, 22);
             this.intervalBox.TabIndex = 6;
+            this.intervalBox.Text = "5";
             // 
             // FileForm
             // 
@@ -182,7 +188,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox currentFileBox;
+        public System.Windows.Forms.ListBox currentFileBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button deleteFile;
         private System.Windows.Forms.Button addFile;

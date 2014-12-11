@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // SlideForm
             // 
@@ -36,11 +42,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
             this.Name = "SlideForm";
-            this.Text = "Slide Form";
+            this.Text = "Slide Form by Kanav Dhir";
+            this.Load += new System.EventHandler(this.SlideForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.SlideForm_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SlideForm_KeyDown);
             this.ResumeLayout(false);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timer1;
     }
 }
